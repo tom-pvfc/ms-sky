@@ -1,0 +1,83 @@
+.home-page {
+    height: 100%;
+
+    &__content {
+        width: 100%;
+        margin: 25px auto;
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+@include SmallDevice {
+    .home-page {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            position: relative;
+            &--movies {
+                margin:10px;
+            }
+        }
+    }
+}
+
+@include MediumDevice {
+    .home-page {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        
+            &--movies {
+                margin:10px;
+                flex-grow: 1;
+                flex: 1;
+                background-color: transparent;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+
+
+                -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                -moz-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                -o-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                transition: all 1s cubic-bezier(0, 0, 0, 1);
+                
+                &:hover{
+                    // background-color: $color-5;
+                }
+            }
+
+            &--time {
+                margin:0 10px;
+                flex-grow: 1;
+                flex: 1;
+                background-color: transparent;
+                height: auto;
+
+                display: flex;
+                justify-content: center;
+
+                -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                -moz-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                -o-transition: all 1s cubic-bezier(0, 0, 0, 1);
+                transition: all 1s cubic-bezier(0, 0, 0, 1);
+
+                &:hover{
+                    // background-color: $color-5;
+                }
+            }
+        }
+    }
+}
+
+@include OnEmbedDevice() {
+    .home-page {
+    }
+}

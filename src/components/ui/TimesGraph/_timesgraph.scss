@@ -1,0 +1,28 @@
+svg{
+    overflow: visible !important;
+}
+.times-graph{
+    .recharts-wrapper{
+        margin: 0 auto;
+    //     display: flex;
+    //     justify-content: center;
+    //     width: 100% !important;
+    }   
+
+    .custom-tooltip{
+        border:none;
+        border-radius: 3px;
+        background-color: $color-2;
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__wrapper{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

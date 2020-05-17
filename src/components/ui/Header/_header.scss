@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+
+    &__logo{
+        color: $color-2;
+        img{
+            width: 50px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        -webkit-transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+        -moz-transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+        -o-transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+        transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+
+        &:hover{
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@include SmallDevice {
+    .header {
+    }
+}
+
+@include MediumDevice {
+    .header {
+        width: 90%;
+    }
+}

@@ -1,0 +1,23 @@
+.generic-page {
+    height: 100%;    
+
+    &__content{
+        width: 80%;
+        margin: 25px auto;
+    }
+}
+
+@include SmallDevice {
+    .generic-page {
+    }
+}
+
+@include MediumDevice {
+    .generic-page {
+    }
+}
+
+@include OnEmbedDevice() {
+    .generic-page {
+    }
+}

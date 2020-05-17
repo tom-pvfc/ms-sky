@@ -1,0 +1,44 @@
+.main-title {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    
+    text-align: center;
+    background: $color-3;
+    color: $color-2;
+    font-size: 30px;
+
+    &__block {
+        width: 80%;
+        margin: 25px auto;
+    }
+
+    &__header {
+        position: relative;
+        color: $color-5;
+        font-weight: bold;
+        letter-spacing: 8px;
+        h1 {
+            -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -moz-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -o-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            transition: all 1s cubic-bezier(0, 0, 0, 1);
+            
+        }
+        &:hover {
+            h1 {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__description {
+        color: $color-2;
+    }
+}
+
+@include MediumDevice{
+    .main-title{
+        padding: 60px;
+    }
+}
